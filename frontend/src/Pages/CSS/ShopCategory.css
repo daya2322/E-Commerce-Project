@@ -1,0 +1,99 @@
+.shopcategory_banner{
+    display: block;
+    margin: 30px auto;
+    width: 85%;
+}
+.shopcategory_indexSort{
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-around;
+    align-items: center;
+}
+.shopcategory_sort{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+.shopcategory_indexSort p span{
+    font-weight: 600;
+}
+.shopcategory_products{
+    margin:20px 10px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    row-gap: 80px;
+    gap: 30px;
+}
+.shopcategory_loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background-color:#ededed;
+    color:#787878;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+@media(max-width:1280px){
+    .shopcategory_banner{
+        margin:20px auto;
+        width:90%;
+    }
+    .shopcategory_indexSort{
+        width:90%;
+        margin: auto;
+    }
+    .shopcategory_sort{
+        padding:5px 10px;
+        font-size:12px;
+    }
+    .shopcategory_indexSort p{
+        font-size:15px;
+    }
+    .shopcategory_products{
+        width:90%;
+        margin:10px auto;
+        row-gap:40px;
+       
+    }
+    /* .shopcategory_products .item{
+        margin: auto;
+    } */
+    .shopcategory_loadmore{
+        margin:10px auto;
+        width:150px;
+        height:50px;
+        font-size:16px;
+    }
+}
+@media(max-width:800px){
+    .shopcategory_banner{
+        width:95%;
+    }
+    .shopcategory_products{
+        width:95%;
+    }
+    .shopcategory_loadmore{
+        margin:6px auto;
+        width:150px;
+        height:40px;
+        font-size:13px;
+    }
+}
+@media(max-width:500px){
+    .shopcategory_products{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+.shopcategory_products .item img {
+    width: 200px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+    border-radius: 10px; /* Optional: Rounds the edges */
+}

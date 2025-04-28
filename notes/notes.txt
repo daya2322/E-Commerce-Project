@@ -1,0 +1,73 @@
+     (frontend)
+     
+1.npm create-react-app frontend- for creating app
+2.npm install react-router-dom - for routing
+    import {BrowserRouter} from 'react-router-dom'
+
+Run-npm start
+
+
+     (Backend)
+     express-Mongodb
+
+1.npm init- For express js
+2.npm install express- For express dependencies(express installed)
+3.npm install jsonwebtoken- For jsonwebtoken package
+4.npm install mongoose- For mongoose package for MongoDB saupport
+5.npm install multer- For store images in backend folder present in admin folder
+6.npm install cors- For access backend
+
+// write all backend code
+const port=4000;
+const express=require('express');
+const app=express();
+const mongoose=require('mongoose')
+const jwt=require('jsonwebtoken');
+const multer=require('multer');
+const path=require('path');
+const cors=require('cors');
+
+app.use(express.json());
+app.use(cors());
+
+// database connection with mongodb
+mongoose.connect('mongodb+srv://Ecommerce:mlpokn123@cluster0.q7jqs.mongodb.net/Ecommerce')
+
+// API creation
+app.get('/',(req,res)=>{
+     res.send("Express app is running")
+})
+
+
+app.listen(port,(error)=>{
+    if(!error){
+        console.log("Server running on Port 4000:"+port)
+    }
+    else{
+        console.log("Error:"+error)
+    }
+})  
+
+
+Run=node .\index.js
+
+
+      (ADMIN)
+
+1.npm create vite@latest . - For run node_modules
+     select react>>javascript 
+2.npm install- For installing all dependencies
+3.npm run dev -For run of admin pannel on localhost and port no.
+
+4.npm install react-router-dom - for routing
+
+Run-npm run dev
+
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/daya2322/E-Commerce-Project.git
+git push -u origin main
